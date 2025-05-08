@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, signal, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-user-profile',
@@ -14,6 +14,11 @@ export class UserProfileComponent implements OnInit,OnChanges {
 
  
   @Input() id: number | undefined
+  currentId = signal<number | undefined>(undefined);
+
+  constructor(){
+    this.currentId.set(this.id);
+  }
 
 
   ngOnChanges(changes: SimpleChanges): void {

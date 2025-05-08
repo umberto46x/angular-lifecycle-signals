@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, signal, S
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [],
   template: `
-      <p>{{ id }}</p>
+      <p>{{  id }}</p>
       <p> {{render()}}</p>
   `,
   styles: ``

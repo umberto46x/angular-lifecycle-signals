@@ -20,15 +20,15 @@ export class AppComponent {
 
 
   title = 'angular-lifecycle-signals';
-  id = signal<number | undefined> (1);
+  id = signal<number | undefined> (1); // assegnazione di un signal
 
 
   changeID() {
       
         if(this.id() == 10 ){
-          this.id.set(1);
+          this.id.set(1); // set signal
         }else{
-          this.id.update( prev =>  prev! + 1);
+          this.id.update( prev =>  prev! + 1); // update signal
         }
     }
 }
